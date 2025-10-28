@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quick - Генератор случайных чисел онлайн</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ДЕКОРАТИВНЫЕ ЭЛЕМЕНТЫ ПО БОКАМ -->
+    <div class="decoration left-decoration">
+        <div class="decoration-circle circle-1"></div>
+        <div class="decoration-circle circle-2"></div>
+        <div class="decoration-circle circle-3"></div>
+        <div class="decoration-dots dots-1"></div>
+        <div class="decoration-dots dots-2"></div>
+        <div class="decoration-line line-1"></div>
+        <div class="decoration-line line-2"></div>
+        <div class="decoration-square square-1"></div>
+        <div class="decoration-triangle triangle-1"></div>
+    </div>
+    
+    <div class="decoration right-decoration">
+        <div class="decoration-circle circle-4"></div>
+        <div class="decoration-circle circle-5"></div>
+        <div class="decoration-circle circle-6"></div>
+        <div class="decoration-dots dots-3"></div>
+        <div class="decoration-dots dots-4"></div>
+        <div class="decoration-line line-3"></div>
+        <div class="decoration-line line-4"></div>
+        <div class="decoration-square square-2"></div>
+        <div class="decoration-triangle triangle-2"></div>
+    </div>
+
+    <!-- ШАПКА НА ВЕСЬ ЭКРАН -->
+    <header class="full-width-header">
+        <div class="header-content">
+            <div class="logo">
+                <h1>Random Quick</h1>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- БАННЕР СВЕРХУ -->
+        <div class="ad-top">
+            <div class="ad-placeholder">Рекламный баннер</div>
+        </div>
+
+        <!-- ОСНОВНОЙ КОНТЕНТ -->
+        <main class="main">
+            <div class="generator-card">
+                <h2 class="title">Случайное число:</h2>
+                
+                <!-- ОКНО С ЧИСЛАМИ -->
+                <div class="numbers-display" id="numbersDisplay">
+                    Нажмите "Сгенерировать"
+                </div>
+                
+                <!-- КНОПКА ГЕНЕРАЦИИ -->
+                <button class="generate-btn" id="generateBtn">
+                    <span class="btn-text">Сгенерировать</span>
+                    <div class="btn-shine"></div>
+                </button>
+
+                <!-- НАСТРОЙКИ -->
+                <div class="settings">
+                    <div class="setting-group">
+                        <label>Сколько чисел?</label>
+                        <input type="number" class="input-field" id="countInput" value="5" min="1">
+                    </div>
+                    
+                    <div class="range-group">
+                        <div class="setting-group">
+                            <label>От</label>
+                            <input type="number" class="input-field" id="fromInput" value="1">
+                        </div>
+                        
+                        <div class="setting-group">
+                            <label>До</label>
+                            <input type="number" class="input-field" id="toInput" value="100">
+                        </div>
+                    </div>
+
+                    <!-- ЧЕКБОКС ИСКЛЮЧЕНИЯ -->
+                    <div class="exclude-section">
+                        <label class="exclude-checkbox-label">
+                            <input type="checkbox" id="excludeCheckbox">
+                            <span class="checkmark"></span>
+                            Исключить числа
+                        </label>
+                        
+                        <!-- ПОЛЕ ДЛЯ ВВОДА ИСКЛЮЧЕННЫХ ЧИСЕЛ -->
+                        <div class="exclude-input-container" id="excludeInputContainer" style="display: none;">
+                            <input type="text" class="exclude-input" id="excludeInput" 
+                                   placeholder="Введите числа через запятую (например: 7, 13, 42)">
+                            <div class="exclude-hint">Через запятую, например: 5, 10, 15</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- РЕКЛАМНЫЕ БАННЕРЫ СНИЗУ -->
+        <div class="ads">
+            <div class="ad-placeholder">Рекламный баннер</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
