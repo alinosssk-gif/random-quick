@@ -1,0 +1,193 @@
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- META DESCRIPTION ДЛЯ ПОИСКОВЫХ СИСТЕМ -->
+    <meta name="description" content="Бесплатный генератор случайных чисел онлайн. Генерируйте случайные числа в любом диапазоне, настраивайте количество, исключайте ненужные числа. Простой и удобный инструмент для розыгрышей, выборов и случайных решений">
+    
+    <!-- META-TAG ДЛЯ PROPELLERADS VERIFICATION -->
+    <meta name="monetag" content="b590140ef7d6122734de44e54165ec18">
+    
+    <!-- THEME COLOR -->
+    <meta name="theme-color" content="#4f46e5">
+    <meta name="google-site-verification" content="hGZUysOnpUuFH5XTqNuElV7X9fIpv6G8VCQLv9YmuGc" />
+
+    <!-- SCHEMA.ORG MICRODATA -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Random Quick - Генератор случайных чисел онлайн",
+      "description": "Бесплатный генератор случайных чисел с настройками диапазона и исключения чисел",
+      "url": "https://random-quick.netlify.app/",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "RUB"
+      }
+    }
+    </script>
+
+    <!-- GOOGLE ANALYTICS -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8L736FTFZ8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8L736FTFZ8');
+    </script>
+
+    <title>Random Quick - Генератор случайных чисел онлайн</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- FAVICON И ИКОНКИ ДЛЯ GOOGLE -->
+    <link rel="icon" href="favicon.ico?=v2" type="image/x-icon">
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.ico">
+    
+    <!-- ОСНОВНЫЕ ИКОНКИ ДЛЯ ПОИСКА GOOGLE -->
+    <link rel="icon" type="image/png" sizes="192x192" href="web-app-manifest-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="web-app-manifest-512x512.png">
+    
+    <!-- APPLE ICONS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="RandomQuick">
+    
+    <!-- WEB APP MANIFEST -->
+    <link rel="manifest" href="site.webmanifest">
+</head>
+<body>
+    <!-- ДЕКОРАТИВНЫЕ ЭЛЕМЕНТЫ ПО БОКАМ -->
+    <div class="decoration left-decoration">
+        <div class="decoration-circle circle-1"></div>
+        <div class="decoration-circle circle-2"></div>
+        <div class="decoration-circle circle-3"></div>
+        <div class="decoration-dots dots-1"></div>
+        <div class="decoration-dots dots-2"></div>
+        <div class="decoration-line line-1"></div>
+        <div class="decoration-line line-2"></div>
+        <div class="decoration-square square-1"></div>
+        <div class="decoration-triangle triangle-1"></div>
+    </div>
+    
+    <div class="decoration right-decoration">
+        <div class="decoration-circle circle-4"></div>
+        <div class="decoration-circle circle-5"></div>
+        <div class="decoration-circle circle-6"></div>
+        <div class="decoration-dots dots-3"></div>
+        <div class="decoration-dots dots-4"></div>
+        <div class="decoration-line line-3"></div>
+        <div class="decoration-line line-4"></div>
+        <div class="decoration-square square-2"></div>
+        <div class="decoration-triangle triangle-2"></div>
+    </div>
+
+    <!-- ШАПКА НА ВЕСЬ ЭКРАН -->
+    <header class="full-width-header">
+        <div class="header-content">
+            <div class="logo">
+                <h2>Random Quick</h2>
+            </div>
+        </div>
+    </header>
+
+
+<div class="container">
+        <!-- БАННЕР СВЕРХУ - ADSTERRA -->
+        <div class="ad-top">
+            <script async="async" data-cfasync="false" src="//pl27978557.effectivegatecpm.com/51dfb3215023218b061a4d1282e26698/invoke.js"></script>
+            <div id="container-51dfb3215023218b061a4d1282e26698"></div>
+        </div>
+
+        <!-- ОСНОВНОЙ КОНТЕНТ -->
+        <main class="main">
+            <div class="generator-card">
+                <h1 class="title">Случайное число:</h1>
+                
+                <!-- ОКНО С ЧИСЛАМИ -->
+                <div class="numbers-display" id="numbersDisplay">
+                    Нажмите "Сгенерировать"
+                </div>
+
+                <!-- КНОПКА ГЕНЕРАЦИИ -->
+                <button class="generate-btn" id="generateBtn">
+                    <span class="btn-text">Сгенерировать</span>
+                    <div class="btn-shine"></div>
+                </button>
+
+                <!-- НАСТРОЙКИ -->
+                <div class="settings">
+                    <div class="setting-group">
+                        <label>Сколько чисел?</label>
+                        <input type="number" class="input-field" id="countInput" value="5" min="1">
+                    </div>
+                    
+                    <div class="range-group">
+                        <div class="setting-group">
+                            <label>От</label>
+                            <input type="number" class="input-field" id="fromInput" value="1">
+                        </div>
+                        
+                        <div class="setting-group">
+                            <label>До</label>
+                            <input type="number" class="input-field" id="toInput" value="100">
+                        </div>
+                    </div>
+
+                    <!-- ЧЕКБОКС ИСКЛЮЧЕНИЯ -->
+                    <div class="exclude-section">
+                        <label class="exclude-checkbox-label">
+                            <input type="checkbox" id="excludeCheckbox">
+                            <span class="checkmark"></span>
+                            Исключить числа
+                        </label>
+                        
+                        <!-- ПОЛЕ ДЛЯ ВВОДА ИСКЛЮЧЕННЫХ ЧИСЕЛ -->
+                        <div class="exclude-input-container" id="excludeInputContainer" style="display: none;">
+                            <input type="text" class="exclude-input" id="excludeInput" 
+                                   placeholder="Введите числа через запятую (например: 7, 13, 42)">
+                            <div class="exclude-hint">Через запятую, например: 5, 10, 15</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ БЛОК -->
+            <div class="faq-block">
+                <h2>Часто задаваемые вопросы</h2>
+                
+                <div class="faq-item">
+                    <h3>Как пользоваться генератором случайных чисел?</h3>
+                    <p>Укажите диапазон чисел (от и до), выберите количество чисел и нажмите "Сгенерировать". Для исключения определенных чисел отметьте галочку "Исключить числа".</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Для чего можно использовать этот генератор?</h3>
+                    <p>Для розыгрышей, лотерей, случайных выборов, конкурсов и любых ситуаций, где нужны случайные числа.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Можно ли генерировать отрицательные числа?</h3>
+                    <p>Да, вы можете указать любой диапазон, включая отрицательные числа.</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- РЕКЛАМНЫЕ БАННЕРЫ СНИЗУ - ADSTERRA -->
+
+<div class="ads">
+            <script async="async" data-cfasync="false" src="//pl27978557.effectivegatecpm.com/51dfb3215023218b061a4d1282e26698/invoke.js"></script>
+            <div id="container-51dfb3215023218b061a4d1282e26698"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
